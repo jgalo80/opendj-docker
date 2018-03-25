@@ -1,0 +1,43 @@
+dn: dc=com
+objectClass: domain
+objectClass: top
+dc: com
+
+dn: dc=example,dc=com
+objectClass: domain
+objectClass: top
+dc: example
+
+dn: ou=applications,dc=example,dc=com
+objectClass: organizationalunit
+objectClass: top
+ou: applications
+
+dn: ou=People,dc=example,dc=com
+objectClass: organizationalunit
+objectClass: top
+ou: People
+
+dn: uid=jose,ou=People,dc=example,dc=com
+objectClass: person
+#objectClass: cos
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: top
+uid: jose
+#classOfService: gold
+userpassword: jose
+facsimiletelephonenumber: +1 408 555 4661
+givenname: jose
+cn: Jose apellido
+sn: apellido
+mail: abarnes@example.com
+ou: People
+
+dn: cn=agora,ou=applications,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+ou: agora
+description: People who can manage accounting entries
+uniquemember: uid=jose,ou=People,dc=example,dc=com
+cn: agora
